@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - ROCK PAPER SCISSORS FIGHT!!!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/play">Single Player</a>
+        </li>
+        <li>
+            <a href="/">Two Players</a>
+        </li>
+    </ul>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>WHO WON???</h1>
+
+{% if winner %}
+<p>{{winner}} WINS!!!</p>
+{% else %}
+<p>nobody won!</p>
+{% endif %}
+
+<P>WHO PLAYED WHAT?</P>
+<P>{{ game.player1.name }} played {{ game.player1.choice }}</P>
+<P>{{ game.player2.name }} played {{ game.player2.choice }}</P>
+
+{% endblock %}
