@@ -10,15 +10,25 @@
     <label for="p1-name">Player One Name</label>
     <input type="text" name="p1-name" id="p1-name">
     <label for="p1-move">Player One Move</label>
-    <input type="text" name="p1-move" id="p1-move">
+    <select name="p1-move" id="p1-move">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
 
 
     <label for="p2-name">Player Two Name</label>
     <input type="text" name="p2-name" id="p2-name">
     <label for="p2-move">Player Two Move</label>
-    <input type="text" name="p2-move" id="p2-move">
+    <select name="p2-move" id="p2-move">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>   
+    </select>
 
     <input type="submit" value="FIGHT">
 </form>
+
+<p>No friends? Why not <a href="/oneplayer">play against the computer?</a></p>
 
 {% endblock %}

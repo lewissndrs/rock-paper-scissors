@@ -25,12 +25,23 @@ def two_player():
     winner = game1.find_winner()
     return render_template("result.html",title="FIGHT OVER",winner=winner,game=game1)   
 
-# this one needs rewritten
-@app.route('/oneplayer/<p1choice>')
-def one_player(p1choice=None):
-    player1 = Player("Tom",p1choice)
+@app.route('/oneplayer')
+def load_one_player():
+    return render_template("oneplayer.html",title="One Player Mode")
+
+@app.route('/oneplayer/game/', methods=['POST'])
+def one_player():
+    # create game
     game1 = Game()
+    # create player one (human)
+    p1name = request.form["p1-name"]
+    p1move = request.form["p1-move"]
+    player1 = Player(p1name,p1move)
+    # create player two (Computer)
+    player2 = game1.cpu_player()
+    # add players to game
     game1.add_player(player1)
-    game1.add_player(game1.cpu_player())
+    game1.add_player(player2)
+    # find winner
     winner = game1.find_winner()
-    return render_template("result.html",title="FIGHT OVER",winner=winner,game=game1)   
+    return render_template("result.html",title="FIGHT OVER",winner=winner,game=game1)

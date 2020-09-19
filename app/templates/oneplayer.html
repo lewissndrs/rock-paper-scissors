@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Rock, Paper, Scissors...FIGHT!</h1>
+
+<h2>MAN VS. MACHINE MODE</h2>
+
+<form action="/oneplayer/game/" method='POST'>
+    <label for="p1-name">Player One Name</label>
+    <input type="text" name="p1-name" id="p1-name">
+    <label for="p1-move">Player One Move</label>
+    <select name="p1-move" id="p1-move-vs-cpu">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+
+    <input type="submit" value="FIGHT">
+</form>
+
+
+{% endblock %}
