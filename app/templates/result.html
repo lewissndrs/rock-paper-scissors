@@ -2,16 +2,23 @@
 
 {% block content %}
 
-<h1>WHO WON???</h1>
-
+<div class='result'>
 {% if winner %}
 <p>{{winner}} WINS!!!</p>
 {% else %}
-<p>nobody won!</p>
+<p>It's a tie!</p>
 {% endif %}
+</div>
 
-<P>WHO PLAYED WHAT?</P>
-<P>{{ game.player1.name }} played {{ game.player1.choice }}</P>
-<P>{{ game.player2.name }} played {{ game.player2.choice }}</P>
+<div class='whoplayed'>
+<P id='result1'>{{ game.player1.name }} played {{ game.player1.choice }}</P>
+<P id='result2'>{{ game.player2.name }} played {{ game.player2.choice }}</P>
+</div>
+
+<div class='playagain'>
+<h2>Play again?</h2>
+<a href="/oneplayer">Single player game</a>
+<a href=".">Two player game</a>
+</div>
 
 {% endblock %}

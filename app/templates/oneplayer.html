@@ -2,7 +2,10 @@
 
 {% block content %}
 
-<h1>Rock, Paper, Scissors...FIGHT!</h1>
+<hgroup>
+    <h1>Rock, Paper, Scissors...FIGHT!</h1>
+    <p class='emojis'>&#9994 &#9995 &#9996</p>
+</hgroup>
 
 <h2>MAN VS. MACHINE MODE</h2>
 
@@ -16,8 +19,9 @@
         <option value="scissors">Scissors</option>
     </select>
 
-    <input type="submit" value="FIGHT">
+    <input type="submit" value="FIGHT" class='submit'>
 </form>
 
+<p>Tired of playing with yourself? <a href="/">Play with a friend</a> instead.</p>
 
 {% endblock %}

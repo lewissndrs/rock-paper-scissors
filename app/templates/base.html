@@ -7,17 +7,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <ul>
-        <li>
-            <a href="/oneplayer">Single Player</a>
-        </li>
-        <li>
-            <a href="/">Two Players</a>
-        </li>
-    </ul>
 
     {% block content %}
 
     {% endblock %}
+
+    <footer>
+        <h6>Powered by Flask &#9994 &#9995 &#9996</h6>
+    </footer>
 </body>
 </html>

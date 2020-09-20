@@ -2,10 +2,139 @@
 
 body {
     font-family: 'Open Sans',sans-serif;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 22px;
+    background: #FF416C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+hgroup {
+    text-shadow: 0px -3px 0 black,
+    0px 3px 0 black,
+   -3px 0 0 black,
+   3px 0 0 black;
+}
+
+hgroup > h1 {
     font-family: 'Carter One';
     font-size: 50px;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+hgroup > p {
+    margin: 0;
+}
+
+.emojis {
+    display: grid;
+    place-items: center;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Caesar Dressing';
+    font-size: 40px;
+    display: grid;
+    place-items: center;
+    text-shadow: 0px -2px 0 black,
+    0px 2px 0 black,
+   -2px 0 0 black,
+   2px 0 0 black;
+}
+
+hgroup {
+    margin: 50px 0;
+}
+
+form {
+    width: 70%;
+    min-width: 450px;
+    max-width: 1040px;
+    margin: 0 auto;
+    background-color: rgba(245, 245, 245, 0.515);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns:
+    1fr 1fr 1fr 1fr;
+}
+
+form > label {
+    margin-left: 4px;
+}
+
+form > input, form > select {
+    background-color:transparent;
+    color: whitesmoke;
+    padding: 4px;
+    margin: 4px;
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+}
+
+.submit {
+    grid-column-end: span 4 ;
+    place-self: center;
+    background-color: tomato;
+    font-size: 25px;
+    padding: 10px;
+    border: none;
+
+}
+
+.result {
+    display: grid;
+    place-items: center;
+    font-family: 'Hanalei Fill';
+    font-size: 70px;
+    text-shadow: 0px -3px 0 black,
+    0px 3px 0 black,
+   -3px 0 0 black,
+   3px 0 0 black;
+}
+
+.whoplayed{
+    font-family: 'Caesar Dressing';
+    font-size: 30px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(245, 245, 245, 0.515);
+    border-radius: 20px;
+}
+
+#result1{
+    color: cornflowerblue;
+}
+
+#result2{
+    color:tomato;
+}
+
+.playagain {
+    display:grid;
+    place-items: center;
+}
+
+.playagain > a {
+    background-color: tomato;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 4px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    color: whitesmoke;
+    padding-left: 5%;
 }
